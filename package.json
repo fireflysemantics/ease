@@ -1,0 +1,62 @@
+{
+  "name": "@fireflysemantics/ease",
+  "version": "1.0.0",
+  "description": "Ease animation methods written in typescript.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "del-cli dist && tsc",
+    "test": "nyc mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "doc": "typedoc --out doc src/index.ts"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.spec.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "html",
+      "lcov"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fireflysemantics/ease.git"
+  },
+  "keywords": [
+    "ease",
+    "easing",
+    "animation",
+    "typescript",
+    "angular"
+  ],
+  "author": "Ole Ersoy",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/fireflysemantics/ease/issues"
+  },
+  "homepage": "https://github.com/fireflysemantics/ease#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/mocha": "^2.2.48",
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
+    "del-cli": "^1.1.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.0.4",
+    "nyc": "^11.6.0",
+    "source-map-support": "^0.5.4",
+    "ts-node": "^5.0.1",
+    "typedoc": "^0.11.1",
+    "typescript": "^2.7.2"
+  }
+}
