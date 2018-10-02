@@ -21,8 +21,8 @@ console.log("The linear ease value is: ", result);
 
 ### Javascript
 ```javascript
-let Ease = require('@fireflysemantics/ease').Ease;
-let result:number = Ease.linearEase(10,10,100,100);
+let linearEase = require('@fireflysemantics/ease');
+let result:number = linearEase(10,10,100,100);
 console.log("The linear ease value is: ", result);
 ```
 
